@@ -1,0 +1,94 @@
+﻿<div id="headerBar">
+    <div class="wrap">
+        <a href="http://www.dynamicsoundonline.com/">
+            <img src="~/Content/images/Dynamic Sound (Web-Small).jpeg" width="121" height="103" alt="Dynamic Sound Professional DJ Service" title="Dynamic Sound Professional DJ Service" />
+        </a>
+        <h2 class="whiteHeader">Great DJ Entertainment & Excellent DJ Service Matters Most!</h2>
+    </div>
+</div>
+
+<div id="mainNav">
+    <div class="wrap">
+        <ul class="menu" style="position: relative;">
+            <li onmouseover="showlayer('');">
+                <a href="/">Home</a>
+            </li>
+            <li onmouseover="showlayer('eventsMenu');">
+                <a>Events and Services</a>
+                <div onmouseout="hideLayer('eventsMenu');" class="submenu doubleMenu" id="eventsMenu">
+                    <ul>
+                        <li>Events</li>
+                        <li><a>Weddings</a></li>
+                        <li><a>Anniversaries</a></li>
+                        <li><a>Birthdays</a></li>
+                        <li><a>Corporate</a></li>
+                        <li><a>Formal Events</a></li>
+                        <li><a>Reunions</a></li>
+                        <li><a>Schools</a></li>
+                        <li><a>Theme Events</a></li>
+                    </ul>
+                    <ul>
+                        <li>Services</li>
+                        <li><a>AV Rentals</a></li>
+                        <li><a>Up-Lighting</a></li>
+
+                        <li class="partition"><a>Make Payment</a></li>
+                        <li><a>Request Information</a></li>
+                        <li><a>Submit Information</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li onmouseover="showlayer('aboutMenu');">
+                <a>About</a>
+                <div onmouseout="hideLayer('aboutMenu');" class="submenu" id="aboutMenu">
+                    <ul>
+                        <li><a>FAQs</a></li>
+                        <li><a>Music List</a></li>
+                        <li><a>My DJ Biography</a></li>
+                        <li><a>My Promise</a></li>
+                        <li><a>Quality Statement</a></li>
+                        <li><a>Statistics</a></li>
+                        <li class="partition"><a>Contact Us</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li onmouseover="showlayer('feedbackMenu');">
+                <a>Feedback</a>
+                <div onmouseout="hideLayer('feedbackMenu');" class="submenu" id="feedbackMenu">
+                    <ul>
+                        <li><a>Reviews</a></li>
+                        <li><a>Testimonials</a></li>
+                        <li class="partition"><a>Feedback Survery</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li onmouseover="showlayer('');">
+                <a>Request Information</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function showlayer(layer) {
+        var allMenus = document.querySelectorAll('.submenu');
+
+        var myLayer = document.getElementById(layer);
+        for (var i = 0; i < allMenus.length; i++) {
+            var item = allMenus[i];
+            if (item !== myLayer) {
+                item.style.display = 'none';
+            }
+        }
+        if (myLayer) {
+            myLayer.style.display = "block";
+        }
+    }
+    function hideLayer(layer) {
+        var myLayer = document.getElementById(layer);
+        if (myLayer.style.display === "block" || myLayer.style.display === "") {
+            myLayer.style.display = "none";
+        }
+
+    }
+</script>
